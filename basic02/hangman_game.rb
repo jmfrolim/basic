@@ -12,6 +12,16 @@ def masked_word(kicks, secret_word)
   mask
 end
 
+
+def draw_secret_word()
+  alert_choose_word()
+  text_file = File.read("dictionary.txt")
+  all_words = text_file.split("\n")
+  position_word = rand(all_words.size)
+  secret_word = all_words[position_word]
+  alert_word_choose(secret_word)
+end
+
 def asks_for_valid_kick(kicks, errors, mask)
   attempts_header(kicks, errors, mask)
   loop do

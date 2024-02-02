@@ -21,12 +21,15 @@ def asks_kick
   kick
 end
 
-def draw_secret_word()
+def alert_choose_word()
   puts "choose an word..."
-  secret_word = "programer"
+end
+
+def alert_word_choose(secret_word)
   puts "The chosen word has #{secret_word.size} letters... good luck!"
   secret_word
 end
+
 
 def i_dont_want_to_play?()
   puts "Do you want to play again? (S/N)"
